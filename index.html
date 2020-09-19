@@ -1,9 +1,4 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -24,7 +19,7 @@
 
 				<!-- Logo -->
 				<a href="index.html" class="logo">
-					<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Ryan Guest - Web Developer</span>
+					<span class="symbol"><img src="images/logo.png" alt="" /></span><span class="title">Ryan Guest - Web Developer</span>
 				</a>
 
 				<!-- Nav -->
@@ -59,37 +54,37 @@
 				<section class="tiles">
 					<article class="style1">
 						<span class="image">
-							<img src="images/pic01.jpg" alt="" />
+							<img src="images/golf.png" alt="Golf Ladder Picture" />
 						</span>
 						<a href="http://golf-ladder-aqualate.net/" target="_blank">
 							<h2>Golf Ladder - Aqualate Golf Club</h2>
 							<div class="content">
 								<p>This website was built in order to manage the golf competition for Aqualate.</p>
-								<p>PHP, HTML, CSS</p>
+								<p>PHP, HTML, CSS <span id="github" onclick="github1" class="fab style2 fa-github"></span></p>
 							</div>
 						</a>
 					</article>
 					<article class="style2">
 						<span class="image">
-							<img src="images/pic02.jpg" alt="" />
+							<img src="images/MS1.png" alt="MS1 Picture" />
 						</span>
 						<a href="http://ms1.r-guest-developer.world/" target="_blank">
-							<h2>Milestone Project 1 - Hintwiz Site</h2>
+							<h2>Milestone Project One (MS1) - Hintwiz Site</h2>
 							<div class="content">
 								<p>An example site offering hints and tips to video games</p>
-								<p>HTML, CSS, JS, PHP</p>
+								<p>HTML, CSS, JS, PHP <span id="github" onclick="github1" class="fab style2 fa-github"></span></p>
 							</div>
 						</a>
 					</article>
 					<article class="style3">
 						<span class="image">
-							<img src="images/pic03.jpg" alt="" />
+							<img src="images/Negotiation.png" alt="Negotiation Backdrop" />
 						</span>
 						<a href="http://ms2.r-guest-developer.world/" target="_blank">
 							<h2>MS2 - Negotiation Web Game</h2>
 							<div class="content">
 								<p>A version of "Hostage Negotiator" written into HTML using JavaScript</p>
-								<p>HTML, CSS, JS, PHP</p>
+								<p>HTML, CSS, JS, PHP <span id="github" onclick="github1" class="fab style2 fa-github"></span></p>
 							</div>
 						</a>
 					</article>
@@ -138,7 +133,7 @@
 			<div class="inner">
 				<section>
 					<h2>Get in touch</h2>
-					<form method="post" action="#">
+					<form method="post" action="#" id="contact-form">
 						<div class="fields">
 							<div class="field half">
 								<input type="text" name="name" id="name" placeholder="Name" />
@@ -151,16 +146,16 @@
 							</div>
 						</div>
 						<ul class="actions">
-							<li><input type="submit" value="Send" class="primary" /></li>
+							<li><input type="submit" value="Send" class="primary" id="submit" /></li>
 						</ul>
 					</form>
+					<p id="confirm"></p>
 				</section>
 				<section>
 					<h2>Follow</h2>
 					<ul class="icons">
-						<li><a href="#" class="fab style2 fa-github"><span class="label"><strong> GitHub<strong></span></a></li>
-						<li><a href="#" class="fas style2 fa-file-export"><span class="label"> CV</span></a></li>
-						<li><a href="#" class="fas style2 fa-envelope"><span class="label"> Email</span></a></li>
+						<li><a href="#" class="fab style2 fa-github"><span class="label"><strong> GitHub</strong></span></a></li>
+						<li><a href="assets/cv.docx" class="fas style2 fa-file-export"><span class="label"> CV</span></a></li>
 					</ul>
 				</section>
 			</div>
@@ -169,6 +164,24 @@
 	</div>
 
 	<!-- Scripts -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function() {
+			emailjs.init('user_lTuqfQ4Io570CFJObyc7G');
+		})();
+	</script>
+	<script type="text/javascript">
+		window.onload = function() {
+			document.getElementById('contact-form').addEventListener('submit', function(event) {
+				event.preventDefault()
+				emailjs.sendForm("service_5qsgl8a", "template_yh4gjmp", this)
+				this.reset()
+				document.getElementById('submit').disabled = true
+				document.getElementById('confirm').innerHTML = "Email Sent. Thank you for your interest."
+			});
+		}
+	</script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>

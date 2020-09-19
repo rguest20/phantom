@@ -23,7 +23,9 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	text-decoration: none;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -1841,8 +1843,6 @@ input, select, textarea {
 			-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 			background-color: transparent;
-			border: solid 1px #c9c9c9;
-			border-radius: 4px;
 			width: 2.65em;
 			height: 2.65em;
 			display: inline-block;
@@ -1857,7 +1857,6 @@ input, select, textarea {
 
 			.icon.style2:hover {
 				color: #f2849e;
-				border-color: #f2849e;
 			}
 
 			.icon.style2:active {
@@ -2041,14 +2040,14 @@ input, select, textarea {
 
 	ul.icons {
 		cursor: default;
-		list-style: none;
+		list-style:none;
 		padding-left: 0;
-		margin: -1em 0 2em -1em;
+		margin: 0em 0 2em -1em;
 	}
 
 		ul.icons li {
 			display: inline-block;
-			padding: 1em 0 0 1em;
+			padding: 0em 0 0 1em;
 		}
 
 /* Form */
@@ -2315,6 +2314,9 @@ input, select, textarea {
 		border: 0;
 		display: inline-block;
 		position: relative;
+		height: 300px;
+		width: 400px;
+		opacity: 0.6;
 	}
 
 		.image img {
@@ -2596,11 +2598,14 @@ input, select, textarea {
 				width: 100%;
 				border-radius: 4px;
 				overflow: hidden;
+
 			}
 
 				.tiles article > .image img {
 					display: block;
 					width: 100%;
+					opacity: 0.4;
+					filter: blur(4px);
 				}
 
 				.tiles article > .image:before {
@@ -2687,6 +2692,7 @@ input, select, textarea {
 
 				.tiles article > a h2 {
 					margin: 0;
+					color: #505050;
 				}
 
 				.tiles article > a .content {
@@ -2699,6 +2705,8 @@ input, select, textarea {
 					line-height: 1.5;
 					margin-top: 0.35em;
 					opacity: 0;
+					color: #505050;
+					font-weight: bold;
 				}
 
 					.tiles article > a .content > :last-child {
@@ -2829,7 +2837,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 8em 0 0.1em 0 ;
+		padding: 1em 0 0.1em 0 ;
 	}
 
 		#header .logo {
@@ -2854,9 +2862,8 @@ input, select, textarea {
 			}
 
 				#header .logo .symbol img {
-					display: block;
-					width: 2em;
-					height: 2em;
+					display: inline-block;
+					height: 30px;
 				}
 
 		#header nav {
@@ -3165,7 +3172,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		padding: 5em 0 6em 0 ;
+		padding: 5em 0 1em 0 ;
 		background-color: #f6f6f6;
 	}
 
