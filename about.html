@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 
 <head>
@@ -26,6 +21,9 @@
 				<a href="index.html" class="logo">
 					<span class="symbol"><img src="images/logo.png" alt="" /></span><span class="title">Ryan Guest - Web Developer</span>
 				</a>
+				<div>
+					<button class="button primary small" onclick="buttononeclick()">I Need A Website</button> <button class="button primary small" onclick="buttontwoclick()">I Need Backend Work</button><br>
+				</div>
 
 				<!-- Nav -->
 				<nav>
@@ -113,6 +111,16 @@
 				document.getElementById('submit').disabled = true
 				document.getElementById('confirm').innerHTML = "Email Sent. Thank you for your interest."
 			});
+		}
+
+		function buttononeclick() {
+			location.href = '#contact-form'
+			$('#message').html("Hi Ryan, my name is <<insert name here>> and I'd like to hire you to help with my website.  The details are as follow: \n <<insert details here>>")
+		}
+
+		function buttontwoclick() {
+			location.href = '#contact-form'
+			$('#message').html("Hi Ryan, my name is <<insert name here>> and I'd like to hire you to help with the backend to my site.  The details are as follow: \n <<insert details here>>")
 		}
 	</script>
 	<script src="assets/js/jquery.min.js"></script>
